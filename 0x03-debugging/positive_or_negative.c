@@ -1,13 +1,10 @@
 #include "main.h"
 /**
- * main -Entry point
- * Description - program checks if number i is positive or negetive
+ * positive_or_negative - program checks if number i is positive or negetive
+ * @i: is a number
  * Return: 0
  */
 void positive_or_negative(int i)
-/**
- * positive or negative
- */
 {
 	if (i > 0)
 	{

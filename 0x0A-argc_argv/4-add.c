@@ -9,9 +9,9 @@
  */
 int _atoi(char *s)
 {
-	int i, d, n, len, f, digit;
+	int a, d, n, len, f, digit;
 
-	i = 0;
+	a = 0;
 	d = 0;
 	n = 0;
 	len = 0;
@@ -21,23 +21,23 @@ int _atoi(char *s)
 	while (s[len] != '\0')
 		len++;
 
-	while (i < len && f == 0)
+	while (a < len && f == 0)
 	{
-		if (s[i] == '-')
+		if (s[a] == '-')
 			++d;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[a] >= '0' && s[a] <= '9')
 		{
-			digit = s[i] - '0';
+			digit = s[a] - '0';
 			if (d % 2)
 				digit = -digit;
 			n = n * 10 + digit;
 			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
+			if (s[a + 1] < '0' || s[a + 1] > '9')
 				break;
 			f = 0;
 		}
-		i++;
+		a++;
 	}
 
 	if (f == 0)
@@ -55,15 +55,15 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int sum, num, i, j, k;
+	int sum, num, a, j, k;
 
 	sum = 0;
 
-	for (i = 1; i < argc; i++)
+	for (a = 1; a < argc; a++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[a][j] != '\0'; j++)
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
+			if (argv[a][j] > '9' || argv[a][j] < '0')
 			{
 				puts("Error");
 				return (1);

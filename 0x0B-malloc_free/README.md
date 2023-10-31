@@ -1,1 +1,1 @@
-This is MALLOC README FILE
+This is the README file of Malloc
